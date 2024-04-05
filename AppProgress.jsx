@@ -3,6 +3,7 @@ import {View, Text, Image, SafeAreaView} from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {AnimatedCircularProgress} from 'react-native-circular-progress';
 import {Circle} from 'react-native-svg';
+import GradientText from './components/GradientText';
 
 export default function AppProgress() {
   const [minutes, setMinutes] = useState(30);
@@ -50,17 +51,16 @@ export default function AppProgress() {
             source={require('./Amey_Image.jpg')}
           />
         </View>
-
-        <Text
+        <View
           style={{
-            color: '#F76314',
-            fontWeight: 'bold',
             marginTop: 50,
-            fontSize: 25,
+            justifyContent: 'center',
+            alignSelf: 'center',
+            marginLeft: '15%',
           }}>
-          Amey Bagwe
-        </Text>
-        <Text style={{fontWeight: 'bold'}}>
+          <GradientText text="Amey Bagwe" colors={['#FD5F47', '#F6BF25']} />
+        </View>
+        <Text style={{color: 'white', fontFamily: 'Manrope-SemiBold'}}>
           {minutes > 0 ? ` ${String(minutes).padStart(2, '0')}:` : '00:'}
           {seconds > 0 ? `${String(seconds).padStart(2, '0')}min` : '00min'}
         </Text>

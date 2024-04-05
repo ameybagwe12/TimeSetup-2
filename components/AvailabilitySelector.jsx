@@ -158,7 +158,13 @@ export default function AvailabilitySelector() {
           dropdownStyle={styles.dropdownMenuStyle}
         />
       </View>
-      <Text style={{color: 'white', alignSelf: 'center', paddingTop: 90}}>
+      <Text
+        style={{
+          fontFamily: 'ManRope',
+          color: '#A3A3A3',
+          alignSelf: 'center',
+          paddingTop: 90,
+        }}>
         Unavailable
       </Text>
     </View>
@@ -200,7 +206,7 @@ const styles = StyleSheet.create({
   dropdownButtonStyle: {
     width: 110,
     height: 45,
-    backgroundColor: '#424949',
+    backgroundColor: '#737373',
     borderRadius: 12,
     flexDirection: 'row',
     justifyContent: 'center',
@@ -212,8 +218,8 @@ const styles = StyleSheet.create({
   dropdownButtonTxtStyle: {
     flex: 1,
     fontSize: 12,
-    fontWeight: '200',
-    color: 'white',
+    fontFamily: 'Manrope-Medium',
+    color: '#A3A3A3',
   },
   dropdownButtonArrowStyle: {
     fontSize: 24,

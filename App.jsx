@@ -10,13 +10,14 @@ export default function App() {
   const handleIconPress = iconName => {
     setSelectedIcon(iconName);
   };
-  
+
   const WeekdaySwitch = ({day}) => {
     const [isSwitchOn, setIsSwitchOn] = useState(false);
 
     return (
       <View style={styles.switchContainer}>
-        <View style={{borderRadius: 20, borderColor: 'white', borderWidth: 1}}>
+        <View
+          style={{borderRadius: 20, borderColor: '#A3A3A3', borderWidth: 2}}>
           <ToggleSwitch
             isOn={isSwitchOn}
             onColor="#363534"
@@ -45,18 +46,37 @@ export default function App() {
   return (
     <>
       <View style={styles.outerContainer}>
-        <View style={{marginTop: 100}}>
-          <View style={{flexDirection: 'row'}}>
-            <Text style={{fontWeight: 'bold', color: 'white', fontSize: 20}}>
+        <View
+          style={{
+            marginTop: 100,
+            marginRight: 40,
+          }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              marginRight: 20,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 16,
+                fontFamily: 'Poppins-SemiBold',
+              }}>
               Add availability
             </Text>
             <Icon
               name={'calendar-month'}
-              style={{fontSize: 30, marginLeft: 5}}
+              style={{fontSize: 20, marginLeft: 5, color: 'white'}}
               onPress={() => handleIconPress('call')}
             />
           </View>
-          <Text style={{fontWeight: '500', color: 'white', fontSize: 15}}>
+          <Text
+            style={{
+              fontFamily: 'Manrope-Regular',
+              fontWeight: '500',
+              color: 'white',
+              fontSize: 14,
+            }}>
             How you want to connect with people
           </Text>
         </View>
@@ -70,11 +90,19 @@ export default function App() {
             marginTop: 50,
           }}>
           <View>
-            <Text style={{marginLeft: 12}}>Duration (min)</Text>
+            <Text style={{fontFamily: 'Manrope-Regular', marginLeft: 12}}>
+              Duration (min)
+            </Text>
             <TextInput style={styles.input} placeholder="5 min" />
           </View>
           <View>
-            <Text style={{marginLeft: 12}}>Amount ⟨₹⟩</Text>
+            <Text
+              style={{
+                fontFamily: 'Manrope-Regular',
+                marginLeft: 12,
+              }}>
+              Amount (₹)
+            </Text>
             <TextInput style={styles.input} placeholder="₹ 30" />
           </View>
           <View style={{borderWidth: 1, borderColor: 'white', marginTop: 15}}>
@@ -85,8 +113,8 @@ export default function App() {
           <View style={{justifyContent: 'flex-start', marginTop: 40}}>
             <Text
               style={{
-                fontWeight: 'bold',
-                fontSize: 15,
+                fontFamily: 'Manrope-Medium',
+                fontSize: 12,
                 marginBottom: 20,
                 color: 'white',
               }}>
@@ -133,9 +161,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   weekdayText: {
+    fontFamily: 'Manrope-Medium',
     marginLeft: 20,
-    color: 'white',
-    fontSize: 10,
+    color: '#A3A3A3',
+    fontSize: 12,
   },
   dropdownButtonStyle: {
     width: 110,
@@ -200,7 +229,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderColor: 'white',
     borderRadius: 8,
-    color: 'white',
-    backgroundColor: '#424949',
+    fontFamily: 'Manrope',
+    backgroundColor: '#737373',
   },
 });

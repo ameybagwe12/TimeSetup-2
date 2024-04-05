@@ -7,7 +7,12 @@ export default function TabComponent() {
 
   return (
     <Tab
-      style={{margin: 20}}
+      style={[
+        styles.tab,
+        {
+          borderBottomColor: index === 0 ? 'grey' : 'white', // Initial state border color
+        },
+      ]}
       value={index}
       onChange={setIndex}
       scrollable={false}
@@ -17,24 +22,42 @@ export default function TabComponent() {
         height: 3,
       }}
       dense>
-      <Tab.Item titleStyle={{color: index === 0 ? '#F6A013' : 'white'}}>
-        <Icon
-          name={'call'}
-          style={[styles.dropdownButtonIcon, index === 0 && {color: '#F6A013'}]}
-        />
-      </Tab.Item>
-      <Tab.Item titleStyle={{color: index === 1 ? '#F6A013' : 'white'}}>
-        <Icon
-          name={'videocam'}
-          style={[styles.dropdownButtonIcon, index === 1 && {color: '#F6A013'}]}
-        />
-      </Tab.Item>
-      <Tab.Item titleStyle={{color: index === 2 ? '#F6A013' : 'white'}}>
-        <Icon
-          name={'comment'}
-          style={[styles.dropdownButtonIcon, index === 2 && {color: '#F6A013'}]}
-        />
-      </Tab.Item>
+      <Tab.Item
+        titleStyle={{color: index === 0 ? '#F6A013' : 'white'}}
+        icon={() => (
+          <Icon
+            name={'call'}
+            style={[
+              styles.dropdownButtonIcon,
+              index === 0 && {color: '#F6A013'},
+            ]}
+          />
+        )}
+      />
+      <Tab.Item
+        titleStyle={{color: index === 1 ? '#F6A013' : 'white'}}
+        icon={() => (
+          <Icon
+            name={'videocam'}
+            style={[
+              styles.dropdownButtonIcon,
+              index === 1 && {color: '#F6A013'},
+            ]}
+          />
+        )}
+      />
+      <Tab.Item
+        titleStyle={{color: index === 2 ? '#F6A013' : 'white'}}
+        icon={() => (
+          <Icon
+            name={'comment'}
+            style={[
+              styles.dropdownButtonIcon,
+              index === 2 && {color: '#F6A013'},
+            ]}
+          />
+        )}
+      />
     </Tab>
   );
 }
@@ -97,10 +120,6 @@ const styles = StyleSheet.create({
     marginRight: 8,
     color: 'white',
   },
-  dropdownButtonIcon: {
-    fontSize: 50,
-    color: 'white',
-  },
   selectedIconView: {
     borderBottomColor: '#FFA07A',
   },
@@ -136,5 +155,13 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     color: 'white',
     backgroundColor: '#424949',
+  },
+  tab: {
+    margin: 20,
+    borderBottomWidth: 0.2,
+  },
+  dropdownButtonIcon: {
+    fontSize: 50,
+    color: 'white',
   },
 });
