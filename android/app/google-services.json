@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "862069604787",
+    "project_id": "notification-demo-a2e2b",
+    "storage_bucket": "notification-demo-a2e2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862069604787:android:9c1682e97965a9ae580bc6",
+        "android_client_info": {
+          "package_name": "com.timeravailable"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-83Ivphpk_NPmuRUKX92iX7cypVpis0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
